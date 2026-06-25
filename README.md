@@ -94,6 +94,32 @@ terraform plan
 terraform apply
 ```
 
+## Screenshots
+
+### Architecture Diagram
+![Architecture](Screenshots/architecture-diagram.png)
+
+### Terraform Validate
+![Terraform Validate](Screenshots/terraform-validate.png)
+
+### Terraform Plan
+![Terraform Plan](Screenshots/terraform-plan.png)
+
+### Terraform Apply
+![Terraform Apply](Screenshots/terraform-apply.png)
+
+### EC2 Instance
+![EC2](Screenshots/ec2-instance.png)
+
+### Docker Container
+![Docker](Screenshots/docker-ps.png)
+
+### Flask Application
+![Flask](Screenshots/flask-output.png)
+
+### GitHub Repository
+![GitHub](Screenshots/github-repository.png)
+
 ## Connect to EC2
 
 ```bash
