@@ -51,8 +51,8 @@ aws-flask-app/
 │   └── requirements.txt
 │
 ├── terraform/
-│   ├── main.tf
 │   ├── provider.tf
+│   ├── main.tf
 │   ├── variables.tf
 │   ├── outputs.tf
 │   ├── userdata.sh
@@ -68,12 +68,9 @@ aws-flask-app/
 │   ├── flask-output.png
 │   └── github-repository.png
 │
-├── .gitignore
 ├── README.md
+├── .gitignore
 └── architecture-diagram.png
-
-
-
 
 # Prerequisites
 
