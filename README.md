@@ -54,11 +54,11 @@ aws-flask-app/
 │   ├── main.tf
 │   ├── provider.tf
 │   ├── variables.tf
-│   ├── output.tf
+│   ├── outputs.tf
 │   ├── userdata.sh
 │   └── .terraform.lock.hcl
 │
-├── Screenshots/
+├── screenshots/
 │   ├── architecture-diagram.png
 │   ├── terraform-validate.png
 │   ├── terraform-plan.png
@@ -68,9 +68,12 @@ aws-flask-app/
 │   ├── flask-output.png
 │   └── github-repository.png
 │
-├── README.md
 ├── .gitignore
+├── README.md
 └── architecture-diagram.png
+
+
+
 
 # Prerequisites
 
