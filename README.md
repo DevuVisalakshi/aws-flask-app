@@ -43,7 +43,6 @@ The infrastructure is provisioned using Terraform, and the Flask application is 
 
 # Project Structure
 
-```
 aws-flask-app/
 │
 ├── app/
@@ -52,17 +51,26 @@ aws-flask-app/
 │   └── requirements.txt
 │
 ├── terraform/
-│   ├── provider.tf
 │   ├── main.tf
+│   ├── provider.tf
 │   ├── variables.tf
 │   ├── output.tf
-│   └── userdata.sh
+│   ├── userdata.sh
+│   └── .terraform.lock.hcl
+│
+├── Screenshots/
+│   ├── architecture-diagram.png
+│   ├── terraform-validate.png
+│   ├── terraform-plan.png
+│   ├── terraform-apply.png
+│   ├── ec2-instance.png
+│   ├── docker-container.png
+│   ├── flask-output.png
+│   └── github-repository.png
 │
 ├── README.md
-└── .gitignore
-```
-
----
+├── .gitignore
+└── architecture-diagram.png
 
 # Prerequisites
 
@@ -94,31 +102,16 @@ terraform plan
 terraform apply
 ```
 
-## Screenshots
-
-### Architecture Diagram
-![Architecture](Screenshots/architecture-diagram.png)
-
-### Terraform Validate
-![Terraform Validate](Screenshots/terraform-validate.png)
-
-### Terraform Plan
-![Terraform Plan](Screenshots/terraform-plan.png)
-
-### Terraform Apply
-![Terraform Apply](Screenshots/terraform-apply.png)
-
-### EC2 Instance
-![EC2](Screenshots/ec2-instance.png)
-
-### Docker Container
-![Docker](Screenshots/docker-ps.png)
-
-### Flask Application
-![Flask](Screenshots/flask-output.png)
-
-### GitHub Repository
-![GitHub](Screenshots/github-repository.png)
+# Trade-offs Considered
+Used a single EC2 instance instead of Auto Scaling to keep the project simple.
+Used Docker containers instead of installing the Flask application directly on the EC2 instance for easier deployment and consistency.
+Did not use a Load Balancer because this is a small demo project.
+Chose Terraform to automate infrastructure provisioning instead of creating AWS resources manually.
+# Cost Awareness
+Selected the AWS Free Tier eligible t2.micro EC2 instance to minimize costs.
+Used only the required AWS resources (EC2 and Security Group).
+Avoided additional paid services such as RDS, Load Balancer, and NAT Gateway.
+Resources can be removed using terraform destroy to prevent unnecessary AWS charges.
 
 ## Connect to EC2
 
